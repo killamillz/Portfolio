@@ -7,7 +7,7 @@ import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import ProfilePicture from "/public/images/Face.jpeg";
 import CustomButton from "@/app/ui/shared/buttons/custom-button";
 import { useRouter } from "next/navigation";
-// import Footer from "./shared/footer/footer";
+import Footer from "./shared/footer/footer";
 
 function Home() {
   const router = useRouter();
@@ -50,8 +50,8 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
   const head = RunningText("Hey,");
 
   return (
-    <section className="mt-[130px] md:mt-[300px] h-screen w-[100%]">
-      <div className="flex flex-col justify-center items-center md:block text-center md:text-start">
+    <section className="mt-[80px] md:mt-[300px] h-screen w-[100%]">
+      <div className="flex flex-col justify-center items-center md:block text-center md:text-start min-h-[500px]">
         <p
           className="noto-b-18 md:noto-b-22 text-wrap w-[80%] md:w-[60%]"
           id="home"
@@ -106,18 +106,16 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px]">
-        <p className="30%">Intersted in doing a project together?</p>
-        <div className="hidden md:flex md:border md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
-        <div className="flex justify-center items-center w-[100%] md:w-[29%] mt-[20px]">
+        <p className="md:w-[20%]">Intersted in doing a project together?</p>
+        <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
+        <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
           <CustomButton buttonType={"button"} handleClick={goToContactMe}>
             {" "}
             CONTACT ME{" "}
           </CustomButton>
         </div>
       </div>
-      <div className="nunito-r-8 flex w-full items-center justify-end pt-12 pb-4">
-        <Link href={"#home"}>Back To Top</Link>
-      </div>
+      <Footer />
     </section>
   );
 }

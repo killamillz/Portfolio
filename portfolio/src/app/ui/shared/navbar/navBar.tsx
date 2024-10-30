@@ -21,7 +21,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between py-8 bg-[#0A0A0A] ">
+      <div className="hidden md:flex justify-between py-8 bg-[#0A0A0A]">
         <Image src={Logo} alt={"My logo"} />
         <ul className="flex">
           {links?.map((link: LinksProps, index: number) => (
@@ -29,7 +29,7 @@ function NavBar() {
               key={index}
               onClick={() => router.push(`${link.link}`)}
               className={clsx(
-                "nunito-r-14 px-[20px] cursor-pointer hover:-translate-y-1 duration-300 active:text-green-500",
+                "nunito-r-14 px-[20px] cursor-pointer hover:-translate-y-1 duration-300 active:text-green-500 hover:text-green-500",
                 {
                   "text-green-500": pathname === link.link, // Apply green color if the path matches
                 }
@@ -55,7 +55,7 @@ function NavBar() {
         <div className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-80 flex flex-col nunito-r-14 p-4 z-50 animate-slideIn">
           {" "}
           <div
-            className="flex justify-end w-full"
+            className="flex justify-end w-full hover:text-green-500"
             onClick={() => setIsOpen(false)}
           >
             <RxCross2 size={40} />
@@ -65,7 +65,7 @@ function NavBar() {
               <li
                 key={index}
                 className={clsx("p-8 hover:text-green-500 cursor-pointer", {
-                  "text-green-500": pathname === item.link, // Active tab in green for mobile as well
+                  "text-green-500": pathname === item.link,
                 })}
                 onClick={() => {
                   router.push(item.link);

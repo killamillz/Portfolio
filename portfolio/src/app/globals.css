@@ -40,6 +40,41 @@ html {
   animation: slideIn 0.5s ease-in-out;
 }
 
+.animate-slideInSlow {
+  animation: slideIn 2.5s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 1.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 1.8s ease-out forwards;
+}
+
+
 .nunito-r-8 {
   font-family: "Nunito", serif;
   font-weight: 400;
@@ -135,3 +170,11 @@ html {
   font-style: normal;
   font-size: 2.2rem;
 }
+
+.noto-b-24 {
+  font-family: "Noto_serif", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2.4rem;
+}
+

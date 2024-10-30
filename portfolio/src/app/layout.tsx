@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${nunito.className} ${nonSerif.className} antialiased md:px-40`}
       >
-        <div className="sticky top-0 z-auto">
+        <div className="sticky top-0 z-50">
           <NavBar />
         </div>
         {children}
