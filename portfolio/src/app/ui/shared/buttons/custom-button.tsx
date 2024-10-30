@@ -1,0 +1,31 @@
+/* eslint-disable no-var */
+
+export default function CustomButton({
+  disabled = false,
+  className,
+  children,
+  handleClick,
+  buttonType = "button",
+}: CustomButtonProps) {
+  return (
+    <button
+      disabled={disabled}
+      onClick={handleClick}
+      className={`nunito-r-8 bg-white text-[#0a0a0a] p-4 hover:bg-[#0a0a0a] hover:text-green-500 not-sr-only hover:border ${className}`}
+      type={buttonType}
+    >
+      {children}
+    </button>
+  );
+}
+
+type CustomButtonProps = {
+  children: React.ReactNode | string | JSX.Element;
+  inverted?: boolean;
+  url?: string;
+  customStyle?: string;
+  handleClick?: (e?: React.MouseEvent<HTMLElement>) => void;
+  disabled?: boolean;
+  buttonType?: "button" | "submit" | "reset" | undefined;
+  className?: string;
+};

@@ -1,4 +1,9 @@
+import Home from "./ui/home";
 
-export default function Home() {
-  return <p>hello</p>;
+export default function Main() {
+  return (
+    <main >
+      <Home />
+    </main>
+  );
 }

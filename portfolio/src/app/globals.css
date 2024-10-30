@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +19,119 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.nunito-r-8 {
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+
+.nunito-r-10 {
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.nunito-r-12 {
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+.nunito-r-11 {
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.nunito-r-14 {
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+}
+
+.nunito-sb-14 {
+  font-family: "Nunito", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+
+}
+
+.nunito-b-18 {
+  font-family: "Nunito", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.8rem;
+}
+
+.noto-r-8 {
+  font-family: "Noto_serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+
+.noto-r-10 {
+  font-family: "Noto_serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.noto-r-12 {
+  font-family: "Noto_serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+.noto-sb-14 {
+  font-family: "Noto_serif", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+
+}
+
+.noto-b-18 {
+  font-family: "Noto_serif", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.8rem;
+}
+
+
+.noto-b-22 {
+  font-family: "Noto_serif", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2.2rem;
 }
