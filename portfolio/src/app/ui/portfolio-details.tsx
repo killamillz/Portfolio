@@ -48,7 +48,7 @@ function PortfolioDetails(param: { name: string }) {
             </p>
             <p>Static Previews</p>
             <div
-              className={`min-h-[20rem] pt-[40px] bg-${selectedPortfolio?.bg}-500`}
+              className={`min-h-[20rem] pt-[40px] px-[40px] bg-${selectedPortfolio?.bg}-500`}
             >
               <Image
                 src={selectedPortfolio?.image as StaticImageData}
