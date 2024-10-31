@@ -6,6 +6,7 @@ import CustomButton from "@/app/ui/shared/buttons/custom-button";
 import Footer from "./shared/footer/footer";
 import { useRouter } from "next/navigation";
 import emailjs from "@emailjs/browser";
+import config from "@/app/config";
 
 function ContactMe() {
   const router = useRouter();
@@ -20,9 +21,14 @@ function ContactMe() {
     e.preventDefault();
 
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
-      })
+      .sendForm(
+        config.EMAILJS_SERVICE_ID as string,
+        config.EMAILJS_TEMPLATE_ID as string,
+        form.current,
+        {
+          publicKey: config.EMAILJS_PUBLIC_KEYS,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");
@@ -44,8 +50,8 @@ function ContactMe() {
         <div className="w-[90%] md:w-[60%] animate-slide-in-right">
           <div className="flex flex-col justify-between text-center md:text-start nunito-r-10">
             {` I'd love to hear about what you're working on and how i could help.
-          I'm currently looking for a new role and i'm open to a wide range of
-          opportunity. My preference would be to find a position in a company
+          I'm currently looking to expand my knowledge by learning and developing more solutions.Therefore, i'm open to any
+          opportunity that falls within my expertise. My preference would be to find a position in a company
           any where in the world so i am so happy to hear about opportunites
           that fit that description. I'm a hard-working and postive person who
           will always approach each task with sense of purpose and attention to

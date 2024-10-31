@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito, Noto_Serif } from "next/font/google";
 import NavBar from "@/app/ui/shared/navbar/navBar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -33,6 +34,7 @@ export default function RootLayout({
           <NavBar />
         </div>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
