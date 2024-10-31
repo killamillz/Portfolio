@@ -1,5 +1,8 @@
 import PortfolioDetails from "@/app/ui/portfolio-details";
+import { PortfolioDetailsProps } from "@/app/model/portfolio";
 
-export default function Portfolio( {params} : { params: { name: string } }) {
-  return <PortfolioDetails params={params.name} />;
+export default async function Portfolio({ params }: PortfolioDetailsProps) {
+  const { name } = await params;
+
+  return <PortfolioDetails name={name} />;
 }

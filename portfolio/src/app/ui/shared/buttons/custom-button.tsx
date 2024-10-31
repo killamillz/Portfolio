@@ -11,7 +11,7 @@ export default function CustomButton({
     <button
       disabled={disabled}
       onClick={handleClick}
-      className={`nunito-r-8 bg-white text-[#0a0a0a] p-4 hover:bg-[#0a0a0a] hover:text-green-500 not-sr-only hover:border-green-500 hover:border transition-all duration-200 ${className}`}
+      className={`nunito-r-8 bg-white text-[#0a0a0a] p-4 hover:bg-[#0a0a0a] border hover:text-green-500 not-sr-only hover:border-green-500 hover:border transition-all duration-200 ${className}`}
       type={buttonType}
     >
       {children}

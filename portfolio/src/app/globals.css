@@ -74,6 +74,17 @@ html {
   animation: slideInFromRight 1.8s ease-out forwards;
 }
 
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px); /* Optional slight shift for smoother entry */
+}
+
 
 .nunito-r-8 {
   font-family: "Nunito", serif;
@@ -154,6 +165,13 @@ html {
   font-style: normal;
   font-size: 1.4rem;
 
+}
+
+.noto-sb-16 {
+  font-family: "Noto_serif", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.8rem;
 }
 
 .noto-b-18 {

@@ -1,65 +1,65 @@
 "use client";
 
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import React from "react";
 import CustomButton from "@/app/ui/shared/buttons/custom-button";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
+import Footer from "./shared/footer/footer";
+import { portfolioList } from "../data";
 
 function Portfolio() {
   const Router = useRouter();
-  const portfolioList = [
-    {
-      name: "Plutus",
-      image: null,
-      details:
-        "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScriptfor the areas that required interactivity, such as the testimonial slider.",
-      bg: "red",
-    },
-    {
-      name: "Plutus",
-      image: null,
-      details:
-        "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScriptfor the areas that required interactivity, such as the testimonial slider.",
-      bg: "blue",
-    },
-    {
-      name: "Plutus",
-      image: null,
-      details:
-        "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScriptfor the areas that required interactivity, such as the testimonial slider.",
-      bg: "green",
-    },
-    {
-      name: "Plutus",
-      image: null,
-      details:
-        "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScriptfor the areas that required interactivity, such as the testimonial slider.",
-      bg: "gold",
-    },
-    {
-      name: "Plutus",
-      image: null,
-      details:
-        "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScriptfor the areas that required interactivity, such as the testimonial slider.",
-      bg: "pink",
-    },
-  ];
+   const portfolioRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target); // Stop observing once faded in
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    portfolioRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const goToContactMe = () => {
+    Router.push("/contact-me");
+  };
+
   return (
-    <section>
+    <section className="mt-44 py-[20px]">
       {portfolioList?.map((item, index) => (
         <div
-          className={clsx("flex w-full mb-24", {
+          ref={(el) => {
+            portfolioRefs.current[index] = el;
+          }}
+          className={clsx("flex w-full mb-40", {
             "flex-row-reverse": index % 2 === 0,
           })}
           key={index}
         >
           <div
-            className={`min-h-[20rem] px-[40px] w-[50%] pt-[40px] bg-${item.bg}`}
+            className={`px-[40px] w-[50%] mx-5 pt-[40px] bg-${item?.bg}-500 hover:bg-${item?.bg}-300 hover:opacity-85 translate-y-1 duration-500`}
           >
-            <Image src={item.image} alt={item.name} width={0} height={0} />
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={0}
+              height={0}
+              className="h-full"
+            />
           </div>
-          <div className="w-[50%] p-12">
+          <div className="flex flex-col justify-center border-y w-[50%] mx-10 py-8">
             <div className="w-full">
               <p className="noto-b-18 md:noto-b-22">{item.name}</p>
               <p className="nunito-r-10">{item.details}</p>
@@ -73,7 +73,7 @@ function Portfolio() {
                 View Project{" "}
               </CustomButton>
             </div>
-            <div className="flex justify-start  items-center w-fit mt-[20px]">
+            <div className="flex justify-start items-center w-fit mt-[20px]">
               <CustomButton buttonType={"button"}>
                 {" "}
                 View Github Repo{" "}
@@ -82,6 +82,18 @@ function Portfolio() {
           </div>
         </div>
       ))}
+
+      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px] noto-b-18 md:noto-b-22">
+        <p className="md:w-[30%]">Interested in doing a project together?</p>
+        <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
+        <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
+          <CustomButton buttonType={"button"} handleClick={goToContactMe}>
+            {" "}
+            CONTACT ME{" "}
+          </CustomButton>
+        </div>
+      </div>
+      <Footer />
     </section>
   );
 }

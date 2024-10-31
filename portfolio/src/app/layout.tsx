@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} ${nonSerif.className} antialiased md:px-40`}
+        className={`${nunito.className} ${nonSerif.className} antialiased md:px-40 animate-slideInSlow`}
       >
         <div className="sticky top-0 z-50">
           <NavBar />

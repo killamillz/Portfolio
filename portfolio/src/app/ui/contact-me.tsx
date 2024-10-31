@@ -100,8 +100,8 @@ function ContactMe() {
           </div>
         </div>
       </form>
-      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px]">
-        <p className="md:w-[20%]">Want to see my awesome works?</p>
+      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px] noto-b-18 md:noto-b-22">
+        <p className="md:w-[30%]">Want to see my awesome works?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
         <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
           <CustomButton buttonType={"button"} handleClick={goToPortfolio}>
