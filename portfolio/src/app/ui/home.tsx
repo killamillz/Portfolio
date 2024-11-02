@@ -71,14 +71,12 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
             ABOUT ME
           </Link>
         </div>
-        <div>
-
-        </div>
+        <div></div>
       </div>
 
       <div
         id="about-me"
-        className="flex flex-col md:flex-row md:justify-between pt-[120px] md:py-[180px]"
+        className="flex flex-col  md:flex-row md:justify-between pt-[120px] md:py-[180px]"
       >
         <div className="h-[100%] w-[100%] md:w-[50%] mb-[40px] md:mb-[0px]">
           <Image
@@ -86,19 +84,16 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
             alt={"profile picutre"}
             width={0}
             height={0}
-            className="h-full"
             unoptimized
             priority
           />
         </div>
-        <div className="border-y w-[100%] md:w-[45%]">
-          <p className="noto-b-18 md:noto-b-22 mt-[20px] mb-[10px]">
+        <div className="md:flex md:flex-col justify-between border-y w-[100%] md:w-[45%]">
+          <p className="noto-b-18 md:noto-b-22 mt-[20px] mb-[10px] md:mb-0 md:pt-5">
             ABOUT ME
           </p>
-          <article className=" nunito-r-10 mb-[10px]">
-            {article}
-          </article>
-          <div className="flex justify-center items-center w-full mb-[20px] md:mb-[10px] mt-[20px] md:mt-[0px]">
+          <article className=" nunito-r-10 mb-[10px]">{article}</article>
+          <div className="flex justify-center items-center w-full mb-[20px] md:mb-[10px] mt-[20px] md:mt-[0px] md:py-5 ">
             <CustomButton
               buttonType={"button"}
               handleClick={goToPortfolio}

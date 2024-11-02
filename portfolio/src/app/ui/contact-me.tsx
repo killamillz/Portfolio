@@ -43,7 +43,7 @@ function ContactMe() {
 
   return (
     <section className="px-5 md:px-0">
-      <div className="flex flex-col md:flex-row border-b py-4 md:py-12 mt-8 md:mt-20 ">
+      <div className="flex flex-col md:flex-row md:border-t border-b py-4 md:py-12 mt-8 md:mt-20 ">
         <div className="mb-4 md:mb-0 md:w-[40%]">
           <p className="noto-b-24 animate-slide-in-left">Get in Touch</p>
         </div>

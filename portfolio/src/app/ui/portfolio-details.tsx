@@ -30,12 +30,13 @@ function PortfolioDetails(param: { name: string }) {
 
   return (
     <section className="px-5 md:px-0">
-      <div className="w-full h-fit py-10 md:py-32 bg-red">
+      <div className="w-full h-fit my-10 md:my-32 bg-red p-2 border">
         <Image
           src={selectedPortfolio?.image as StaticImageData}
           alt={selectedPortfolio?.name as string}
           width={0}
           height={0}
+          className="h-full border"
           priority
         />
       </div>{" "}

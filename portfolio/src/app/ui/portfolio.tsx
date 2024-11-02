@@ -10,7 +10,7 @@ import { portfolioList } from "../data";
 
 function Portfolio() {
   const Router = useRouter();
-   const portfolioRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const portfolioRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,17 +49,19 @@ function Portfolio() {
           key={index}
         >
           <div
-            className={`md:px-[40px] md:p-[40px] md:w-[50%] md:mx-5 md:pt-[40px] md:bg-${item?.bg}-500 hover:bg-${item?.bg}-300 hover:opacity-85 translate-y-1 duration-500`}
+            className={`p-2 border md:w-[50%] md:mx-5 md:bg-${item?.bg}-500 hover:bg-${item?.bg}-300 hover:opacity-85 translate-y-1 duration-500 hover:border-green-500 hover:duration-250 cursor-pointer`}
+            onClick={() => Router.push(`/portfolio/${item.name}`)}
           >
             <Image
               src={item.image}
               alt={item.name}
               width={0}
               height={0}
-              className="h-full"
+              className="h-full border hover:border-green-500 duration-250"
+              priority
             />
           </div>
-          <div className="flex flex-col justify-center border-y md:mx-10 py-8">
+          <div className="flex flex-col justify-center border-y md:mx-10 md:w-[50%] py-8">
             <div className="w-full">
               <p className="noto-b-18 md:noto-b-22">{item.name}</p>
               <p className="nunito-r-10">{item.details}</p>
