@@ -30,7 +30,8 @@ function PortfolioDetails(param: { name: string }) {
 
   return (
     <section className="px-5 md:px-0">
-      <div className="w-full h-fit my-10 md:my-32 bg-red p-2 border">
+      <p>{param.name}</p>
+      <div className="w-full md:h-[600px] h-fit my-10 md:mb-32 bg-red p-2 border">
         <Image
           src={selectedPortfolio?.image as StaticImageData}
           alt={selectedPortfolio?.name as string}
@@ -41,8 +42,8 @@ function PortfolioDetails(param: { name: string }) {
         />
       </div>{" "}
       <div>
-        <div className="md:flex w-full md:mb-40 ">
-          <div className="md:w-[50%] noto-sb-16">
+        <div className=" w-full md:mb-10 ">
+          <div className=" noto-sb-16">
             <p className="md:mb-10 mb-5">Project Background</p>
             <p className="md:mb-20 mb-10 nunito-r-10">
               {selectedPortfolio?.projectBackground}
@@ -60,13 +61,7 @@ function PortfolioDetails(param: { name: string }) {
               />
             </div>
           </div>
-          <div className="md:border-y w-full md:w-[50%] md:mx-20 md:py-12 pb-10">
-            <div className="w-full hidden md:block">
-              <p className="noto-b-18 md:noto-b-22 mb-5">
-                {selectedPortfolio?.name}
-              </p>
-              <p className="nunito-r-10">{selectedPortfolio?.details}</p>
-            </div>
+          <div className=" w-full md:py-12 pb-10 border-b ">
             <div className="flex justify-start items-center w-fit mt-10 md:mt-[40px]">
               <CustomButton
                 buttonType={"button"}
@@ -88,11 +83,15 @@ function PortfolioDetails(param: { name: string }) {
         </div>
       </div>
       <div className="flex justify-between ">
-        {selectedIndex > 0 && (
+        {
           <div
             className="flex w-full justify-start cursor-pointer py-8 border-y border-r"
             onClick={() =>
-              goToSelectedPortfolio(portfolioList[selectedIndex - 1].name)
+              selectedIndex === 0
+                ? goToSelectedPortfolio(
+                    portfolioList[portfolioList.length - 1]?.name
+                  )
+                : goToSelectedPortfolio(portfolioList[selectedIndex - 1]?.name)
             }
           >
             <div className="flex hover:-translate-y-1 duration-300 hover:text-green-500 w-fit">
@@ -100,22 +99,32 @@ function PortfolioDetails(param: { name: string }) {
                 <FaChevronLeft size={20} />
               </div>
               <div className="hover:.animate-slideIn">
-                <p>{portfolioList[selectedIndex - 1].name}</p>
+                <p>
+                  {selectedIndex === 0
+                    ? portfolioList[portfolioList.length - 1]?.name
+                    : portfolioList[selectedIndex - 1]?.name}
+                </p>
                 <p>Previous Project</p>
               </div>
             </div>
           </div>
-        )}
-        {selectedIndex < portfolioList.length - 1 && (
+        }
+        {
           <div
             className="flex w-full justify-end cursor-pointer py-8 border-y border-l "
             onClick={() =>
-              goToSelectedPortfolio(portfolioList[selectedIndex + 1].name)
+              selectedIndex === portfolioList.length - 1
+                ? goToSelectedPortfolio(portfolioList[0]?.name)
+                : goToSelectedPortfolio(portfolioList[selectedIndex + 1]?.name)
             }
           >
             <div className="flex hover:-translate-y-1 duration-300 hover:text-green-500 w-fit">
               <div>
-                <p>{portfolioList[selectedIndex + 1].name}</p>
+                <p>
+                  {selectedIndex === portfolioList.length - 1
+                    ? portfolioList[0]?.name
+                    : portfolioList[selectedIndex + 1]?.name}
+                </p>
                 <p>Next Project</p>
               </div>
               <div className="flex justify-end items-center w-fit ml-2">
@@ -123,10 +132,12 @@ function PortfolioDetails(param: { name: string }) {
               </div>
             </div>
           </div>
-        )}
+        }
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] md:py-[20px] noto-b-18 md:noto-b-22 mt-5 md:mt-0">
-        <p className="md:w-[30%] w-full">Interested in doing a project together?</p>
+        <p className="md:w-[30%] w-full">
+          Interested in doing a project together?
+        </p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
         <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
           <CustomButton buttonType={"button"} handleClick={goToContactMe}>
