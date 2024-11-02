@@ -42,13 +42,13 @@ function ContactMe() {
   };
 
   return (
-    <section>
-      <div className="flex flex-col md:flex-row justify-center items-center md:justify-start md:items-start border-y py-12 mt-8 md:mt-20 ">
+    <section className="px-5 md:px-0">
+      <div className="flex flex-col md:flex-row border-b py-4 md:py-12 mt-8 md:mt-20 ">
         <div className="mb-4 md:mb-0 md:w-[40%]">
           <p className="noto-b-24 animate-slide-in-left">Get in Touch</p>
         </div>
-        <div className="w-[90%] md:w-[60%] animate-slide-in-right">
-          <div className="flex flex-col justify-between text-center md:text-start nunito-r-10">
+        <div className="w-full md:w-[60%] animate-slide-in-right">
+          <div className="flex flex-col justify-between nunito-r-10">
             {` I'd love to hear about what you're working on and how i could help.
           I'm currently looking to expand my knowledge by learning and developing more solutions.Therefore, i'm open to any
           opportunity that falls within my expertise. My preference would be to find a position in a company
@@ -69,7 +69,7 @@ function ContactMe() {
         </div>
       </div>
       <form ref={form} onSubmit={sendEmail}>
-        <div className="flex flex-col md:flex-row justify-center items-center md:justify-start md:items-start border-b py-8 md:py-12">
+        <div className="flex flex-col md:flex-row border-b py-8 md:py-12">
           <div className="mb-4 md:mb-0 md:w-[40%]">
             <p className="noto-b-24 animate-slideInSlow">Contact Me</p>
           </div>
@@ -100,14 +100,14 @@ function ContactMe() {
                 name="message"
               />
             </div>
-            <div className="flex justify-center w-full mt-[20px]">
+            <div className="flex w-full mt-[20px]">
               <CustomButton buttonType={"submit"}> SEND MESSAGE </CustomButton>
             </div>
           </div>
         </div>
       </form>
-      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px] noto-b-18 md:noto-b-22">
-        <p className="md:w-[30%]">Want to see my awesome works?</p>
+      <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] py-[20px] noto-b-18 md:noto-b-22">
+        <p className="md:w-[30%] w-full">Want to see my awesome works?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
         <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
           <CustomButton buttonType={"button"} handleClick={goToPortfolio}>

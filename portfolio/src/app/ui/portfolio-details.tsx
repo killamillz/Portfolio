@@ -29,8 +29,8 @@ function PortfolioDetails(param: { name: string }) {
   };
 
   return (
-    <section>
-      <div className="w-full h-fit py-32 bg-red">
+    <section className="px-5 md:px-0">
+      <div className="w-full h-fit py-10 md:py-32 bg-red">
         <Image
           src={selectedPortfolio?.image as StaticImageData}
           alt={selectedPortfolio?.name as string}
@@ -40,15 +40,15 @@ function PortfolioDetails(param: { name: string }) {
         />
       </div>{" "}
       <div>
-        <div className={"flex w-full mb-40 "}>
-          <div className="w-[50%] noto-sb-16">
-            <p className="mb-10">Project Background</p>
-            <p className="mb-20 nunito-r-10">
+        <div className="md:flex w-full md:mb-40 ">
+          <div className="md:w-[50%] noto-sb-16">
+            <p className="md:mb-10 mb-5">Project Background</p>
+            <p className="md:mb-20 mb-10 nunito-r-10">
               {selectedPortfolio?.projectBackground}
             </p>
             <p>Static Previews</p>
             <div
-              className={`min-h-[20rem] pt-[40px] px-[40px] bg-${selectedPortfolio?.bg}-500`}
+              className={`flex flex-wrap w-[50%] justify-between items-center mt-2 md:block md:min-h-[20rem] md:pt-[40px] md:px-[40px] bg-${selectedPortfolio?.bg}-500`}
             >
               <Image
                 src={selectedPortfolio?.image as StaticImageData}
@@ -59,14 +59,14 @@ function PortfolioDetails(param: { name: string }) {
               />
             </div>
           </div>
-          <div className="border-y w-[50%] mx-20 py-12">
-            <div className="w-full">
+          <div className="md:border-y w-full md:w-[50%] md:mx-20 md:py-12 pb-10">
+            <div className="w-full hidden md:block">
               <p className="noto-b-18 md:noto-b-22 mb-5">
                 {selectedPortfolio?.name}
               </p>
               <p className="nunito-r-10">{selectedPortfolio?.details}</p>
             </div>
-            <div className="flex justify-start items-center w-fit mt-[40px]">
+            <div className="flex justify-start items-center w-fit mt-10 md:mt-[40px]">
               <CustomButton
                 buttonType={"button"}
                 handleClick={() =>
@@ -124,8 +124,8 @@ function PortfolioDetails(param: { name: string }) {
           </div>
         )}
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px] noto-b-18 md:noto-b-22">
-        <p className="md:w-[30%]">Interested in doing a project together?</p>
+      <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] md:py-[20px] noto-b-18 md:noto-b-22 mt-5 md:mt-0">
+        <p className="md:w-[30%] w-full">Interested in doing a project together?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
         <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
           <CustomButton buttonType={"button"} handleClick={goToContactMe}>

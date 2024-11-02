@@ -11,7 +11,7 @@ function Footer({
   size = 40,
   position = "center",
   iconClassName = "px-[20px]",
-  pb = "16",
+  pb = "10",
 }: FooterProps) {
   const links = [
     {
@@ -33,7 +33,7 @@ function Footer({
 
   return (
     <div
-      className={`flex justify-${position} items-center pb-${pb} pt-8 bg-[#0A0A0A]`}
+      className={`flex justify-${position} items-center pb-${pb} pt-8 bg-[#0A0A0A] mb-10`}
     >
       <ul className="flex">
         {links?.map((link: LinksProps, index: number) => (

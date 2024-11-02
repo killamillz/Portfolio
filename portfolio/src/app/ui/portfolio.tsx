@@ -37,19 +37,19 @@ function Portfolio() {
   };
 
   return (
-    <section className="mt-44 py-[20px]">
+    <section className="md:mt-44 px-5 md:px-0 py-[20px]">
       {portfolioList?.map((item, index) => (
         <div
           ref={(el) => {
             portfolioRefs.current[index] = el;
           }}
-          className={clsx("flex w-full mb-40", {
+          className={clsx("md:flex w-full md:mb-40 mb-10", {
             "flex-row-reverse": index % 2 === 0,
           })}
           key={index}
         >
           <div
-            className={`px-[40px] w-[50%] mx-5 pt-[40px] bg-${item?.bg}-500 hover:bg-${item?.bg}-300 hover:opacity-85 translate-y-1 duration-500`}
+            className={`md:px-[40px] md:p-[40px] md:w-[50%] md:mx-5 md:pt-[40px] md:bg-${item?.bg}-500 hover:bg-${item?.bg}-300 hover:opacity-85 translate-y-1 duration-500`}
           >
             <Image
               src={item.image}
@@ -59,7 +59,7 @@ function Portfolio() {
               className="h-full"
             />
           </div>
-          <div className="flex flex-col justify-center border-y w-[50%] mx-10 py-8">
+          <div className="flex flex-col justify-center border-y md:mx-10 py-8">
             <div className="w-full">
               <p className="noto-b-18 md:noto-b-22">{item.name}</p>
               <p className="nunito-r-10">{item.details}</p>
@@ -83,7 +83,7 @@ function Portfolio() {
         </div>
       ))}
 
-      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px] noto-b-18 md:noto-b-22">
+      <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] py-[20px] noto-b-18 md:noto-b-22">
         <p className="md:w-[30%]">Interested in doing a project together?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
         <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">

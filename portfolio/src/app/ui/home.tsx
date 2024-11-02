@@ -50,30 +50,35 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
   const head = RunningText("Hey,");
 
   return (
-    <section className="mt-[80px] md:mt-[300px] h-screen w-[100%]">
-      <div className="flex flex-col justify-center items-center md:block text-center md:text-start min-h-[500px]">
-        <p
-          className="noto-b-18 md:noto-b-22 text-wrap w-[80%] md:w-[60%]"
-          id="home"
-        >
-          {head}
-          <br></br>
-          {introTextToDisplay}
-        </p>
-        <Link
-          href="#about-me"
-          className="flex items-center justify-between nunito-r-8 mt-20 md:mt-40 bg-green-500 pr-4 pl-2 py-2 w-fit hover:-translate-y-1 hover:bg-[#33313D] hover:text-green-500 duration-300"
-        >
-          <span className="mr-[20px] ">
-            <MdOutlineKeyboardDoubleArrowDown size={20} />
-          </span>
-          ABOUT ME
-        </Link>
+    <section className="mt-[80px] md:mt-[300px] h-screen w-[100%] px-5 md:px-0">
+      <div>
+        <div>
+          <p
+            className="noto-b-18 md:noto-b-22 text-wrap md:w-[60%] min-h-[315px] md:min-h-[150px]"
+            id="home"
+          >
+            {head}
+            <br></br>
+            {introTextToDisplay}
+          </p>
+          <Link
+            href="#about-me"
+            className="flex items-center justify-between nunito-r-8 mt-20 md:mt-40 bg-green-500 pr-4 pl-2 py-2 w-fit hover:-translate-y-1 hover:bg-[#33313D] hover:text-green-500 duration-300 animate-bounce"
+          >
+            <span className="mr-[20px] ">
+              <MdOutlineKeyboardDoubleArrowDown size={20} />
+            </span>
+            ABOUT ME
+          </Link>
+        </div>
+        <div>
+
+        </div>
       </div>
 
       <div
         id="about-me"
-        className="flex flex-col md:flex-row justify-center items-center md:justify-between pt-[120px] md:py-[180px] px-[20px] md:px-[0px]"
+        className="flex flex-col md:flex-row md:justify-between pt-[120px] md:py-[180px]"
       >
         <div className="h-[100%] w-[100%] md:w-[50%] mb-[40px] md:mb-[0px]">
           <Image
@@ -87,10 +92,10 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
           />
         </div>
         <div className="border-y w-[100%] md:w-[45%]">
-          <p className="flex justify-center items-center noto-b-18 md:noto-b-22 mt-[20px] mb-[10px]">
+          <p className="noto-b-18 md:noto-b-22 mt-[20px] mb-[10px]">
             ABOUT ME
           </p>
-          <article className="text-wrap text-center nunito-r-10 mb-[10px]">
+          <article className=" nunito-r-10 mb-[10px]">
             {article}
           </article>
           <div className="flex justify-center items-center w-full mb-[20px] md:mb-[10px] mt-[20px] md:mt-[0px]">
@@ -105,7 +110,7 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center px-[30px] py-[20px] noto-b-18 md:noto-b-22">
+      <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] py-[20px] noto-b-18 md:noto-b-22">
         <p className="md:w-[30%]">Interested in doing a project together?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
         <div className="flex justify-center md:justify-end items-center w-[100%] md:w-[19%] mt-[20px]">
