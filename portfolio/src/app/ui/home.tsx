@@ -71,7 +71,9 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
             ABOUT ME
           </Link>
         </div>
-        <div></div>
+        {/* <div className="hidden md:block h-[200px] w-[35%] bg-gradient-to-r from-black from-2%  ">
+          <Image src={WindowImage} alt="landing page image" height={0}  width={0} />
+        </div> */}
       </div>
 
       <div

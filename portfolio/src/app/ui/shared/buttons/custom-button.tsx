@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-var */
 
 export default function CustomButton({
@@ -24,7 +25,7 @@ type CustomButtonProps = {
   inverted?: boolean;
   url?: string;
   customStyle?: string;
-  handleClick?: (e?: React.MouseEvent<HTMLElement>) => void;
+  handleClick?: any;
   disabled?: boolean;
   buttonType?: "button" | "submit" | "reset" | undefined;
   className?: string;

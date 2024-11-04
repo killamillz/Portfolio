@@ -68,7 +68,7 @@ function ContactMe() {
           </div>
         </div>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} >
         <div className="flex flex-col md:flex-row border-b py-8 md:py-12">
           <div className="mb-4 md:mb-0 md:w-[40%]">
             <p className="noto-b-24 animate-slideInSlow">Contact Me</p>
@@ -101,7 +101,7 @@ function ContactMe() {
               />
             </div>
             <div className="flex w-full mt-[20px]">
-              <CustomButton buttonType={"submit"}> SEND MESSAGE </CustomButton>
+              <CustomButton buttonType={"button"} handleClick={sendEmail}> SEND MESSAGE </CustomButton>
             </div>
           </div>
         </div>
