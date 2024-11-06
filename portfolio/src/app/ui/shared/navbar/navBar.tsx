@@ -21,7 +21,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between py-8 bg-[#0A0A0A]">
+      <div className="hidden md:flex justify-between py-8 bg-inherit">
         <Image src={Logo} alt={"My logo"} />
         <ul className="flex">
           {links?.map((link: LinksProps, index: number) => (
@@ -40,7 +40,7 @@ function NavBar() {
           ))}
         </ul>
       </div>
-      <div className="md:hidden flex justify-between p-4 bg-[#0A0A0A]">
+      <div className="md:hidden flex justify-between p-4 bg-inherit">
         <Image src={Logo} alt={"My logo"} />
         {!isOpen && (
           <div
@@ -52,7 +52,7 @@ function NavBar() {
         )}
       </div>
       {isOpen && (
-        <div className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-80 flex flex-col nunito-r-14 p-4 z-50 animate-slideIn">
+        <div className="absolute top-0 left-0 w-full h-screen bg-inherit bg-opacity-80 flex flex-col nunito-r-14 p-4 z-50 animate-slideIn">
           {" "}
           <div
             className="flex justify-end w-full hover:text-green-500"
