@@ -50,7 +50,7 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
   const head = RunningText("Hey,");
 
   return (
-    <section className="mt-[80px] md:mt-[300px] h-screen w-[100%] px-5 md:px-0">
+    <section className="mt-[140px] md:mt-[300px] h-screen w-[100%] px-5 md:px-0">
       <div>
         <div>
           <p

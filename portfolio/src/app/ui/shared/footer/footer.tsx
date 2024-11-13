@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import "./footer.css";
 
 function Footer({
   size = 40,
@@ -33,7 +34,7 @@ function Footer({
 
   return (
     <div
-      className={`flex justify-${position} items-center pb-${pb} pt-8 bg-[#0A0A0A] mb-10`}
+      className={`flex justify-${position} items-center pb-${pb} pt-8 bg-[#0A0A0A] mb-10 background`}
     >
       <ul className="flex">
         {links?.map((link: LinksProps, index: number) => (
