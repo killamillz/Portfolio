@@ -2,7 +2,7 @@ import portfolioImage from "/public/images/portfolio.png";
 import express from "/public/images/express.svg";
 import graphql from "/public/images/graphql.svg";
 import javascript from "/public/images/javascript.svg";
-import mongoDb from "/public/images/mongoDb.svg";
+import mongoDb from "/public/images/mongodb.svg";
 import nextjs from "/public/images/nextjs.svg";
 import react from "/public/images/react.svg";
 import typescript from "/public/images/typescript.svg";
