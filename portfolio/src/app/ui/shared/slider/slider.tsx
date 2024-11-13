@@ -14,6 +14,7 @@ function Slider() {
             height={0}
             width={0}
             // className="w-full h-full"
+            //hello
           />
         </div>
       ))}
