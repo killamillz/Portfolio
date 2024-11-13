@@ -8,6 +8,7 @@ import { portfolioList } from "../data";
 import { useRouter } from "next/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import type { StaticImageData } from "next/image";
+import Slider from "./shared/slider/slider";
 
 function PortfolioDetails(param: { name: string }) {
   const router = useRouter();
@@ -134,6 +135,7 @@ function PortfolioDetails(param: { name: string }) {
           </div>
         }
       </div>
+      <Slider />
       <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] md:py-[20px] noto-b-18 md:noto-b-22 mt-5 md:mt-0">
         <p className="md:w-[30%] w-full">
           Interested in doing a project together?

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import Footer from "./shared/footer/footer";
 import { portfolioList } from "../data";
+import Slider from "./shared/slider/slider";
 
 function Portfolio() {
   const Router = useRouter();
@@ -85,6 +86,7 @@ function Portfolio() {
         </div>
       ))}
 
+      <Slider />
       <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] py-[20px] noto-b-18 md:noto-b-22">
         <p className="md:w-[30%]">Interested in doing a project together?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>

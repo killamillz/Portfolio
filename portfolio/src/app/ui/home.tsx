@@ -8,6 +8,7 @@ import ProfilePicture from "/public/images/Face.jpeg";
 import CustomButton from "@/app/ui/shared/buttons/custom-button";
 import { useRouter } from "next/navigation";
 import Footer from "./shared/footer/footer";
+import Slider from "./shared/slider/slider";
 
 function Home() {
   const router = useRouter();
@@ -50,7 +51,7 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
   const head = RunningText("Hey,");
 
   return (
-    <section className="mt-[140px] md:mt-[300px] h-screen w-[100%] px-5 md:px-0">
+    <section className="mt-[180px] md:mt-[300px] h-screen w-[100%] px-5 md:px-0">
       <div>
         <div>
           <p
@@ -78,7 +79,7 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
 
       <div
         id="about-me"
-        className="flex flex-col  md:flex-row md:justify-between pt-[120px] md:py-[180px]"
+        className="flex flex-col md:flex-row md:justify-between pt-[120px] md:pt-[180px] md:pb-[20px]"
       >
         <div className="h-[100%] w-[100%] md:w-[50%] mb-[40px] md:mb-[0px]">
           <Image
@@ -107,6 +108,7 @@ An idealistic, ambitious, and principled developer, I am committed to delivering
           </div>
         </div>
       </div>
+      <Slider />
       <div className="flex flex-col md:flex-row justify-between items-center md:px-[30px] py-[20px] noto-b-18 md:noto-b-22">
         <p className="md:w-[30%]">Interested in doing a project together?</p>
         <div className="hidden md:flex md:border-b md:border-white md:justify-center md:items-center md:h-0 md:w-[50%] "></div>
