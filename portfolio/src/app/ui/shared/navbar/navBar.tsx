@@ -8,7 +8,7 @@ import { useRouter, usePathname } from "next/navigation";
 import clsx from "clsx";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
-import "./navbar.css";
+import "./navbar.css"
 
 function NavBar() {
   const router = useRouter();
@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between py-8 bg-inherit fixed w-full top-0 z-50 background">
+      <div className="hidden md:flex justify-between py-8 bg-inherit background">
         <Image src={Logo} alt={"My logo"} />
         <ul className="flex">
           {links?.map((link: LinksProps, index: number) => (
@@ -41,11 +41,11 @@ function NavBar() {
           ))}
         </ul>
       </div>
-      <div className="md:hidden fixed top-0 left-0 right-0 flex justify-between p-4 bg-inherit z-50 background">
+      <div className="md:hidden flex justify-between p-4 bg-inherit">
         <Image src={Logo} alt={"My logo"} />
         {!isOpen && (
           <div
-            className="flex justify-end hover:text-green-500"
+            className="flex justify-end hover:text-green-500 "
             onClick={() => setIsOpen(!isOpen)}
           >
             <RxHamburgerMenu size={40} />
@@ -53,7 +53,7 @@ function NavBar() {
         )}
       </div>
       {isOpen && (
-        <div className="fixed inset-0 top-0 left-0 w-full h-screen bg-opacity-70 flex flex-col nunito-r-14 p-4 z-50 animate-slideIn backdrop-blur-md">
+        <div className="absolute top-0 left-0 w-full h-screen bg-opacity-70 flex flex-col nunito-r-14 p-4 z-50 animate-slideIn backdrop-blur-md">
           {" "}
           <div
             className="flex justify-end w-full hover:text-green-500"

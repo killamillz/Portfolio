@@ -1,3 +1,5 @@
+"use client";
+
 import { sliderImages } from "@/app/data";
 import Image from "next/image";
 
