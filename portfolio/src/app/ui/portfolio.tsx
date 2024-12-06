@@ -51,7 +51,7 @@ function Portfolio() {
         >
           <div
             className={`p-2 border md:w-[50%] md:mx-5 md:bg-${item?.bg}-500 hover:bg-${item?.bg}-300 hover:opacity-85 translate-y-1 duration-500 hover:border-green-500 hover:duration-250 cursor-pointer`}
-            onClick={() => Router.push(`/portfolio/${item.name}`)}
+            onClick={() => Router.push(`/portfolio/${item.slug}`)}
           >
             <Image
               src={item.image}
