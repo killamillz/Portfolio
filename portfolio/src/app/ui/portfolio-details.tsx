@@ -14,11 +14,11 @@ function PortfolioDetails(param: { name: string }) {
   const router = useRouter();
 
   const selectedPortfolio = portfolioList?.find(
-    (portfolio) => portfolio.name === param.name
+    (portfolio) => portfolio.slug === param.name
   );
 
   const selectedIndex = portfolioList?.findIndex(
-    (portfolio) => portfolio.name === param.name
+    (portfolio) => portfolio.slug === param.name
   );
 
   const goToContactMe = () => {
@@ -67,15 +67,20 @@ function PortfolioDetails(param: { name: string }) {
               <CustomButton
                 buttonType={"button"}
                 handleClick={() =>
-                  router.push(`/portfolio/${selectedPortfolio?.name}`)
+                  window.open(`${selectedPortfolio?.link}`, "_blank")
                 }
               >
                 {" "}
-                View Project{" "}
+                View Project link{" "}
               </CustomButton>
             </div>
             <div className="flex justify-start  items-center w-fit mt-[20px]">
-              <CustomButton buttonType={"button"}>
+              <CustomButton
+                handleClick={() =>
+                  window.open(`${selectedPortfolio?.githubLink}`, "_blank")
+                }
+                buttonType={"button"}
+              >
                 {" "}
                 View Github Repo{" "}
               </CustomButton>

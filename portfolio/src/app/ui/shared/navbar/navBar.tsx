@@ -8,7 +8,7 @@ import { useRouter, usePathname } from "next/navigation";
 import clsx from "clsx";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
-import "./navbar.css"
+import "./navbar.css";
 
 function NavBar() {
   const router = useRouter();
@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between py-8 bg-inherit background">
+      <div className="hidden md:flex justify-between py-8 bg-inherit z-50 .background">
         <Image src={Logo} alt={"My logo"} />
         <ul className="flex">
           {links?.map((link: LinksProps, index: number) => (
@@ -41,7 +41,7 @@ function NavBar() {
           ))}
         </ul>
       </div>
-      <div className="md:hidden flex justify-between p-4 bg-inherit">
+      <div className="md:hidden flex justify-between p-4 bg-inherit z-50 ">
         <Image src={Logo} alt={"My logo"} />
         {!isOpen && (
           <div

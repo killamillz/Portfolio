@@ -70,14 +70,17 @@ function Portfolio() {
             <div className="flex justify-start items-center w-fit mt-[20px]">
               <CustomButton
                 buttonType={"button"}
-                handleClick={() => Router.push(`/portfolio/${item.name}`)}
+                handleClick={() => Router.push(`/portfolio/${item.slug}`)}
               >
                 {" "}
                 View Project{" "}
               </CustomButton>
             </div>
             <div className="flex justify-start items-center w-fit mt-[20px]">
-              <CustomButton buttonType={"button"}>
+              <CustomButton
+                handleClick={() => window.open(`${item?.githubLink}`, "_blank")}
+                buttonType={"button"}
+              >
                 {" "}
                 View Github Repo{" "}
               </CustomButton>
