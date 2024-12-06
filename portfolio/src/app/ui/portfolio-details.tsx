@@ -31,7 +31,7 @@ function PortfolioDetails(param: { name: string }) {
 
   return (
     <section className="px-5 md:px-0">
-      <p>{param.name}</p>
+      <p className="uppercase noto-b-24">{param.name}</p>
       <div className="w-full md:h-[600px] h-fit my-10 md:mb-32 bg-red p-2 border">
         <Image
           src={selectedPortfolio?.image as StaticImageData}
