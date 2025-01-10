@@ -34,6 +34,10 @@ html {
   }
 }
 
+.animate-slideInSlow {
+  animation: slideIn 2.5s ease-in-out;
+}
+
 .animate-slideIn {
   animation: slideIn 0.5s ease-in-out;
 }

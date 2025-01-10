@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="hidden md:flex justify-between py-8 bg-inherit z-50 .background">
+      <div className="hidden md:flex justify-between py-8 bg-inherit .background">
         <Image src={Logo} alt={"My logo"} />
         <ul className="flex">
           {links?.map((link: LinksProps, index: number) => (

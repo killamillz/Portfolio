@@ -6,6 +6,8 @@ import nextjs from "/public/images/nextjs.svg";
 import react from "/public/images/react.svg";
 import typescript from "/public/images/typescript.svg";
 import plutus from "/public/images/plutus.png";
+import Max from "/public/images/Max.png";
+import Egba from "/public/images/Egba.png";
 import meet from "/public/images/meet.png";
 
 import type { StaticImageData } from "next/image";
@@ -22,6 +24,30 @@ export type Portfolio = {
 };
 
 export const portfolioList: Portfolio[] = [
+  {
+    name: "Egba Land Website",
+    slug: "egbaLand",
+    image: Egba,
+    details:
+      "This is a descriptive web page of all the chiefs, ceremonies, townships, and cultural information about the Egba people.",
+    bg: "red",
+    projectBackground:
+      "This project was built using NEXTjs, and Tailwind for styling. This is a descriptive web page of all the chiefs, ceremonies, townships, and cultural information about the Egba people.",
+    link: "https://egba-land.vercel.app/",
+    githubLink: "https://github.com/killamillz/Egba_land",
+  },
+  {
+    name: "Max enterprise App",
+    slug: "maxEnterpriseApp",
+    image: Max,
+    details:
+      "An In-house app that helps companies apply for ev vehicles in bulk thereby, improving sales",
+    bg: "red",
+    projectBackground:
+      "This project was built using NEXTjs, React Query, Saas, chakraUi and Tailwind for styling. This is an application for companies to request for more then one assets and also the user seeing and interacting with the app in other to complete the process flow and get onboarded.",
+    link: "https://enterprise.dev.maxdrv.com/",
+    githubLink: "https://enterprise.dev.maxdrv.com/",
+  },
   {
     name: "Plutus",
     slug: "plutus",
