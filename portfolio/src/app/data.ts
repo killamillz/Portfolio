@@ -6,7 +6,6 @@ import nextjs from "/public/images/nextjs.svg";
 import react from "/public/images/react.svg";
 import typescript from "/public/images/typescript.svg";
 import plutus from "/public/images/plutus.png";
-import Max from "/public/images/Max.png";
 import Egba from "/public/images/Egba.png";
 import meet from "/public/images/meet.png";
 
