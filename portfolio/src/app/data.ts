@@ -36,18 +36,18 @@ export const portfolioList: Portfolio[] = [
     link: "https://egba-land.vercel.app/",
     githubLink: "https://github.com/killamillz/Egba_land",
   },
-  {
-    name: "Max enterprise App",
-    slug: "maxEnterpriseApp",
-    image: Max,
-    details:
-      "An In-house app that helps companies apply for ev vehicles in bulk thereby, improving sales",
-    bg: "red",
-    projectBackground:
-      "This project was built using NEXTjs, React Query, Saas, chakraUi and Tailwind for styling. This is an application for companies to request for more then one assets and also the user seeing and interacting with the app in other to complete the process flow and get onboarded.",
-    link: "https://enterprise.dev.maxdrv.com/",
-    githubLink: "https://enterprise.dev.maxdrv.com/",
-  },
+  // {
+  //   name: "Max enterprise App",
+  //   slug: "maxEnterpriseApp",
+  //   image: Max,
+  //   details:
+  //     "An In-house app that helps companies apply for ev vehicles in bulk thereby, improving sales",
+  //   bg: "red",
+  //   projectBackground:
+  //     "This project was built using NEXTjs, React Query, Saas, chakraUi and Tailwind for styling. This is an application for companies to request for more then one assets and also the user seeing and interacting with the app in other to complete the process flow and get onboarded.",
+  //   link: "https://enterprise.dev.maxdrv.com/",
+  //   githubLink: "https://enterprise.dev.maxdrv.com/",
+  // },
   {
     name: "Plutus",
     slug: "plutus",

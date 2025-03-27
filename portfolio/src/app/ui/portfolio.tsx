@@ -73,7 +73,7 @@ function Portfolio() {
                 handleClick={() => Router.push(`/portfolio/${item.slug}`)}
               >
                 {" "}
-                View Project{" "}
+                View Project details{" "}
               </CustomButton>
             </div>
             <div className="flex justify-start items-center w-fit mt-[20px]">

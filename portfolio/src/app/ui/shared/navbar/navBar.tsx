@@ -23,26 +23,26 @@ function NavBar() {
   return (
     <>
       <div className="hidden md:flex justify-between py-8 bg-inherit .background">
-        <Image src={Logo} alt={"My logo"} />
-        <ul className="flex">
+        <Image src={Logo} alt={"My logo"} unoptimized />
+        <div className="flex">
           {links?.map((link: LinksProps, index: number) => (
-            <li
-              key={index}
+            <div
               onClick={() => router.push(`${link.link}`)}
+              key={index}
               className={clsx(
-                "nunito-r-14 px-[20px] cursor-pointer hover:-translate-y-1 duration-300 active:text-green-500 hover:text-green-500",
+                "nunito-r-14 px-[20px] cursor-pointer hover:-translate-y-1 duration-300 text-white hover:text-green-500",
                 {
-                  "text-green-500": pathname === link.link, // Apply green color if the path matches
+                  "text-green-500": pathname === link?.link, // Apply green color if the path matches
                 }
               )}
             >
-              {link.name}
-            </li>
+              <p>{link.name}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
       <div className="md:hidden flex justify-between p-4 bg-inherit z-50 ">
-        <Image src={Logo} alt={"My logo"} />
+        <Image src={Logo} alt={"My logo"} unoptimized />
         {!isOpen && (
           <div
             className="flex justify-end hover:text-green-500 "
@@ -61,9 +61,9 @@ function NavBar() {
           >
             <RxCross2 size={40} />
           </div>
-          <ul className="flex flex-col  justify-center items-center">
+          <div className="flex flex-col  justify-center items-center">
             {links?.map((item, index) => (
-              <li
+              <p
                 key={index}
                 className={clsx("p-8 hover:text-green-500 cursor-pointer", {
                   "text-green-500": pathname === item.link,
@@ -74,9 +74,9 @@ function NavBar() {
                 }}
               >
                 {item.name}
-              </li>
+              </p>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </>
