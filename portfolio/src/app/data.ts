@@ -47,7 +47,6 @@ export const portfolioList: Portfolio[] = [
       "  Built with Next.js (App Router) on the frontend, Node.js + Express on the backend, and MongoDB as the database. Authentication uses JWT with httpOnly refresh token cookies and role-based access control. Payments are processed via Paystack, and inventory stays in sync across online and in-store channels in real timeusing Socket.io. \n The system covers the full retail lifecycle: product catalogue and category management, inventory tracking with low-stock alerts, supplier management and purchase invoicing, a customer-facing e-commerce storefront with cart and checkout, a cashier POS terminal for walk-in sales, and an admin back-office with financial reporting and order management.\n Admin — admin@commerce.com / admin123 \n Sales Staff — staff@commerce.com / staff123  \ n  Customer — register at /register",
     link: "https://commerce-app-v1.vercel.app/login",
     githubLink: "https://github.com/killamillz/Portfolio",
-  hello
   },
   {
     name: "Plutus",
