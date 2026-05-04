@@ -8,6 +8,7 @@ import typescript from "/public/images/typescript.svg";
 import plutus from "/public/images/plutus.png";
 import Egba from "/public/images/Egba.png";
 import meet from "/public/images/meet.png";
+import Nkyss from "/public/images/nkyss.png";
 
 import type { StaticImageData } from "next/image";
 
@@ -35,19 +36,19 @@ export const portfolioList: Portfolio[] = [
     link: "https://egba-land.vercel.app/",
     githubLink: "https://github.com/killamillz/Egba_land",
   },
-  // {
-  //   name: "Max enterprise App",
-  //   slug: "maxEnterpriseApp",
-  //   image: Max,
-  //   details:
-  //     "An In-house app that helps companies apply for ev vehicles in bulk thereby, improving sales",
-  //   bg: "red",
-  //   projectBackground:
-  //     "This project was built using NEXTjs, React Query, Saas, chakraUi and Tailwind for styling. This is an application for companies to request for more then one assets and also the user seeing and interacting with the app in other to complete the process flow and get onboarded.",
-  //   link: "https://enterprise.dev.maxdrv.com/",
-  //   githubLink: "https://enterprise.dev.maxdrv.com/",
-  // hello
-  // },
+  {
+    name: "Nkyss bueaty place",
+    slug: "nkyssBueatyPlace",
+    image: Nkyss,
+    details:
+      "A full-stack retail ERP system built for a cosmetics store, handling everything from online storefront to in-store point-of-sale and back-office management in one unified platform.",
+    bg: "red",
+    projectBackground:
+      "  Built with Next.js (App Router) on the frontend, Node.js + Express on the backend, and MongoDB as the database. Authentication uses JWT with httpOnly refresh token cookies and role-based access control. Payments are processed via Paystack, and inventory stays in sync across online and in-store channels in real timeusing Socket.io. \n The system covers the full retail lifecycle: product catalogue and category management, inventory tracking with low-stock alerts, supplier management and purchase invoicing, a customer-facing e-commerce storefront with cart and checkout, a cashier POS terminal for walk-in sales, and an admin back-office with financial reporting and order management.\n Admin — admin@commerce.com / admin123 \n Sales Staff — staff@commerce.com / staff123  \ n  Customer — register at /register",
+    link: "https://commerce-app-v1.vercel.app/login",
+    githubLink: "https://github.com/killamillz/Portfolio",
+  hello
+  },
   {
     name: "Plutus",
     slug: "plutus",
