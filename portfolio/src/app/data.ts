@@ -8,7 +8,8 @@ import typescript from "/public/images/typescript.svg";
 import plutus from "/public/images/plutus.png";
 import Egba from "/public/images/Egba.png";
 import meet from "/public/images/meet.png";
-import Nkyss from "/public/images/nkyss.png";
+import Nkyss from "/public/images/nkyssBeauty.png";
+import ClintonsDevelopers from "/public/images/clintonsDevelopersImage.png";
 
 import type { StaticImageData } from "next/image";
 
@@ -37,16 +38,28 @@ export const portfolioList: Portfolio[] = [
     githubLink: "https://github.com/killamillz/Egba_land",
   },
   {
-    name: "Nkyss bueaty place",
-    slug: "nkyssBueatyPlace",
+    name: "Nkyss Beauty Place",
+    slug: "nkyssBeautyPlace",
     image: Nkyss,
     details:
       "A full-stack retail ERP system built for a cosmetics store, handling everything from online storefront to in-store point-of-sale and back-office management in one unified platform.",
     bg: "red",
     projectBackground:
-      "  Built with Next.js (App Router) on the frontend, Node.js + Express on the backend, and MongoDB as the database. Authentication uses JWT with httpOnly refresh token cookies and role-based access control. Payments are processed via Paystack, and inventory stays in sync across online and in-store channels in real timeusing Socket.io. \n The system covers the full retail lifecycle: product catalogue and category management, inventory tracking with low-stock alerts, supplier management and purchase invoicing, a customer-facing e-commerce storefront with cart and checkout, a cashier POS terminal for walk-in sales, and an admin back-office with financial reporting and order management.\n Admin — admin@commerce.com / admin123 \n Sales Staff — staff@commerce.com / staff123  \ n  Customer — register at /register",
+      "Built with Next.js (App Router) on the frontend, Node.js + Express on the backend, and MongoDB as the database. Authentication uses JWT with httpOnly refresh token cookies and role-based access control. Payments are processed via Paystack, and inventory stays in sync across online and in-store channels in real time using Socket.io.\n\nThe system covers the full retail lifecycle: product catalogue and category management, inventory tracking with low-stock alerts, supplier management and purchase invoicing, a customer-facing e-commerce storefront with cart and checkout, a cashier POS terminal for walk-in sales, and an admin back-office with financial reporting and order management.\n\nAdmin — admin@commerce.com / admin123\nSales Staff — sale@commerce.com / sales123\nCustomer — create a new account at /register",
     link: "https://commerce-app-v1.vercel.app/login",
     githubLink: "https://github.com/killamillz/Portfolio",
+  },
+  {
+    name: "Clinton's Developers Ltd",
+    slug: "clintonsDevelopersLtd",
+    image: ClintonsDevelopers,
+    details:
+      "A real estate management platform for tracking property listings, buyer assignments, amortization schedules, payment collections, and defaulter monitoring all in one dashboard.",
+    bg: "red",
+    projectBackground:
+      "Built for Clinton's Developers Ltd to digitise their property sales and instalment payment operations. The platform handles the full property lifecycle — from listing available units to assigning buyers, generating amortization schedules, recording payments, and flagging defaulters.\n\nKey modules include a property and unit catalogue, buyer management, instalment scheduling with automated outstanding-balance calculations, a payments ledger, a defaulters list, financial reports, and a user/role administration panel.\n\nBuilt with Next.js, Node.js + Express, and MongoDB. Role-based access control ensures staff only see what they need.\n\nAdmin — admin@realestate.com / Admin@12345",
+    link: "https://real-estate-app-one-chi.vercel.app/login",
+    githubLink: "https://github.com/killamillz",
   },
   {
     name: "Plutus",
