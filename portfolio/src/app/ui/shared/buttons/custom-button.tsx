@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-var */
 
+import { JSX } from "react";
+
 export default function CustomButton({
   disabled = false,
   className,
